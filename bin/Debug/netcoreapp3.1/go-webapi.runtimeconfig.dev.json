@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/home/redfox11/.dotnet/store/|arch|/|tfm|",
+      "/home/redfox11/.nuget/packages"
+    ]
+  }
+}
