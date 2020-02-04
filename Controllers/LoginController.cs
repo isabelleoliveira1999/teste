@@ -8,6 +8,8 @@ namespace GoOrangeApi.Controllers
 {
   public class LoginController : Controller
   {
+    [HttpGet]
+    [Route("/ShowAll")]
     public IActionResult Index()
     {
       MongoDbContext dbContext = new MongoDbContext();
@@ -15,6 +17,7 @@ namespace GoOrangeApi.Controllers
       return View(listaNotas);
     }
     [HttpPost]
+    [Route("/AddUser")]
     public IActionResult AddUser(User entity)
     {
       MongoDbContext dbContext = new MongoDbContext();
@@ -23,6 +26,7 @@ namespace GoOrangeApi.Controllers
       return RedirectToAction("Index", "User");
     }
     [HttpGet]
+    [Route("/DeleteUser")]
     public IActionResult Delete(String Name)
     {
       MongoDbContext dbContext = new MongoDbContext();
