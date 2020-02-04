@@ -8,8 +8,23 @@ namespace go_webapi.DAL
 
   public class DAOUser
   {
-
+    public static bool InsertUser(User user)
+    {
+      bool status;
+      try
+      {
+        // DbContext.Products.Add(user);  
+        //DbContext.SaveChanges();  
+        status = true;
+      }
+      catch (Exception)
+      {
+        status = false;
+      }
+      return status;
+    }
     public List<User> FindUsers()
+
     {
       var connString = "Host=localhost;Username=postgres;Password=zp3;Database=DotNetCoreAPI";
 
@@ -42,4 +57,5 @@ namespace go_webapi.DAL
       return lstUser;
     }
   }
+
 }
